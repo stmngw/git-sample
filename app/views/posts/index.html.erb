@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Date</th>
       <th>Title</th>
       <th>Description</th>
       <th>String</th>
@@ -16,6 +17,7 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
+        <td><%= post.created_at %></td>
         <td><%= post.title %></td>
         <td><%= post.description %></td>
         <td><%= post.string %></td>
