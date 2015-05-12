@@ -14,13 +14,13 @@
 ActiveRecord::Schema.define(version: 20150510095230) do
 
   create_table "posts", force: :cascade do |t|
-    t.string   "title"
-    t.string   "description"
-    t.string   "string"
-    t.integer  "sort"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.string   "status"
+    t.string   "title",       limit: 255
+    t.string   "description", limit: 255
+    t.string   "string",      limit: 255
+    t.integer  "sort",        limit: 4
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "status",      limit: 255
   end
 
 end
