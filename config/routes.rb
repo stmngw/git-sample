@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  resources :categories
   get 'home/index'
   get 'home/show'
   devise_for :users
-  resources :posts, :dashboard
+  resources :posts, :dashboard, :categories
   root to: "posts#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
